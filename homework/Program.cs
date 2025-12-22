@@ -33,7 +33,7 @@ Console.WriteLine("what do you want to do ?");
 Console.WriteLine("(+),(_),(/),(*)");
 string op = Console.ReadLine();
 
-Console.WriteLine("*The operation is in progress*");
+//Console.WriteLine("*The operation is in progress*");
 
 //condidtion
 if (op=="+")
@@ -46,13 +46,17 @@ else if (op=="_")
     result = num1 - num2;
     Console.WriteLine("result is:"+result);
 }
-else
+else if (op=="/")
 {
-    
+    result = num1 / num2;
+    Console.WriteLine("result is :"+result);
 }
+else if(op=="*")
 {
-    
+    result = num1 * num2;
+    Console.WriteLine("result is :"+result);
 }
+//
 
 Console.WriteLine("..........................");
 
