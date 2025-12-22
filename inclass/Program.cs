@@ -14,6 +14,7 @@ Console.WriteLine("your name is :"+""+ name , "your last name is :" + lastName ,
 #endregion*/
 #region session2
 //برنامه ایی که از کاربر وزن جعبه را بگیر و یکسری شرط را لحاظ کند:
+/*
 //value
 int costPerKilo = 100;
 int totalPrice = 0;
@@ -35,5 +36,39 @@ else if(cargoWeight is>20and<=40)
 }
 //output
 Console.WriteLine("your bill is ready .... ");
+Console.WriteLine($"Total Price:{totalPrice}$.");*/
+
+//another condition
+
+//value
+int costPerKilo = 100;
+int totalPrice = 0;
+
+Console.WriteLine("Welcome to the Golden Cargo Ship");
+//user input
+Console.WriteLine("please enter  cargo weight : ");
+int cargoWeight =Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"your cargo weight is{cargoWeight}kg.");
+// condition
+switch (cargoWeight)
+{
+    case<20:
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    case>20and<=40:
+        costPerKilo += 5;
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    case>40:
+        costPerKilo += 10;
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    default:
+        Console.WriteLine("wrong cargo weight");
+        break;
+}
+//output
+Console.WriteLine("your bill is ready .... ");
 Console.WriteLine($"Total Price:{totalPrice}$.");
+
 #endregion
