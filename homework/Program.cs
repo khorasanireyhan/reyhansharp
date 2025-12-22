@@ -34,7 +34,7 @@ Console.WriteLine("(+),(_),(/),(*)");
 string op = Console.ReadLine();
 
 //Console.WriteLine("*The operation is in progress*");
-
+/*
 //condidtion
 if (op=="+")
 {
@@ -55,8 +55,31 @@ else if(op=="*")
 {
     result = num1 * num2;
     Console.WriteLine("result is :"+result);
+}*/
+
+//another condition
+switch (op)
+{
+    case"+":
+        result=num1+num2;
+        Console.WriteLine("result is: "+result);
+        break;
+    case"_":
+        result=num1-num2;
+        Console.WriteLine("result is: "+result);
+        break;
+    case"/":
+        result=num1 / num2;
+        Console.WriteLine("result is: "+result);
+        break;
+    case"*":
+        result=num1 * num2;
+        Console.WriteLine("result is: "+result);
+        break;
+    default:
+        Console.WriteLine("you entered wrong option");
+        break;
 }
-//
 
 Console.WriteLine("..........................");
 
