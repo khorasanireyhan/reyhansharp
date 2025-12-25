@@ -19,7 +19,7 @@ Console.WriteLine(" gender :" + gender);
 Console.WriteLine("__________________________");
 #endregion*/
 
-#region session2
+/*#region session2
 //Building a simple calculator
 //value
 double result;
@@ -55,7 +55,7 @@ else if(op=="*")
 {
     result = num1 * num2;
     Console.WriteLine("result is :"+result);
-}*/
+}
 
 //another condition
 switch (op)
@@ -82,5 +82,19 @@ switch (op)
 }
 
 Console.WriteLine("..........................");
+
+#endregion*/
+
+#region session3
+//cargo ship with (switch & decimal=task )
+/*Console.WriteLine("welcome to cargo ship ");
+//value 
+decimal costPerkilo = 100;
+decimal totalPrice = 0;
+decimal task = 0;
+//user input
+Console*/
+    
+
 
 #endregion
