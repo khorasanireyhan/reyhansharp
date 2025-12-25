@@ -12,7 +12,7 @@ int age =Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"your name is : {name} , your last name is :{lastName},your age is: {age}");
 Console.WriteLine("your name is :"+""+ name , "your last name is :" + lastName ,"your age is:" +""+ age);
 #endregion*/
-#region session2
+/*#region session2
 //برنامه ایی که از کاربر وزن جعبه را بگیر و یکسری شرط را لحاظ کند:
 /*
 //value
@@ -39,7 +39,7 @@ Console.WriteLine("your bill is ready .... ");
 Console.WriteLine($"Total Price:{totalPrice}$.");*/
 
 //another condition
-
+/*
 //value
 int costPerKilo = 100;
 int totalPrice = 0;
@@ -70,5 +70,11 @@ switch (cargoWeight)
 //output
 Console.WriteLine("your bill is ready .... ");
 Console.WriteLine($"Total Price:{totalPrice}$.");
+
+#endregion*/
+
+#region  session3
+//string
+
 
 #endregion
