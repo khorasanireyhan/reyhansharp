@@ -89,36 +89,68 @@ Console.WriteLine("..........................");
 //cargo ship with (switch & decimal=task )
 //use an empty array +switch statement + decimal data type =>
 //value
+using System.ComponentModel.DataAnnotations;
+
 decimal costPerKilo = 100; 
 decimal totalPrice = 0;
 
 Console.WriteLine("Welcome to the Golden Cargo Ship");
 //user input
-Console.WriteLine("How many cargo: ");
-decimal cargoWeight =Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"your cargo weight is{cargoWeight}kg.");
-// condition
-switch (cargoWeight)
-{
-    case<20:
-        totalPrice = cargoWeight * costPerKilo;
-        break;
-    case>20and<=40:
-        costPerKilo += 5;
-        totalPrice = cargoWeight * costPerKilo;
-        break;
-    case>40:
-        costPerKilo += 10;
-        totalPrice = cargoWeight * costPerKilo;
-        break;
-    default:
-        Console.WriteLine("wrong cargo weight");
-        break;
-}
-//output
-Console.WriteLine("your bill is ready .... ");
-Console.WriteLine($"Total Price:{totalPrice}$.");
-    
+Console.WriteLine("How many cargos do you have ? ");
+int numofcargos = int.Parse(Console.ReadLine());
 
+//array or list option
+List<decimal> cargoWeight = new List<decimal>();
+
+for (int i = 1; i <= numofcargos; i++)
+{
+    Console.WriteLine("enter your cargos weight :");
+    decimal weight = decimal.Parse(Console.ReadLine());
+    Console.WriteLine($"your cargo weight is{weight}kg.");
+    cargoWeight.Add(weight);
+}
+// condition
+// For weight under 20 kg, use the fixed price.
+// For 20 to 40 kg, increase the price by 3%.
+// For 40 to 60 kg, increase the price by 4%.
+// For 60 to 100 kg, increase the price by 5%.
+// For weights above 100 kg, we do not offer delivery.
+foreach (decimal weight in cargoWeight)
+{
+    switch (weight)
+    {
+        case < 20:
+            totalPrice = weight * costPerKilo;
+            break;
+        case > 20 and <= 40:
+            costPerKilo *= (decimal)0.03;
+            totalPrice = weight * costPerKilo;
+            break;
+        case > 40 and < 60:
+            costPerKilo *= (decimal)0.04;
+            totalPrice = weight * costPerKilo;
+            break;
+        case >= 60 and < 100:
+            costPerKilo *= (decimal)0.05;
+            totalPrice = weight * costPerKilo;
+            break;
+        case >= 100:
+            Console.WriteLine($"No delivery for {weight} . It's over 100 kg. ");
+            break;
+        default:
+            Console.WriteLine("wrong cargo weight");
+            break;
+    }
+}
+
+//output
+Console.WriteLine("your bill is ready ... ");
+
+Console.WriteLine("____________________________________");
+Console.WriteLine($"Here your Price:{totalPrice}$ for {numofcargos} cargos with {cargoWeight} kg .");
+
+Console.WriteLine("Have a nice day ^_^");
+    
+Console.WriteLine("____________________________________");
 
 #endregion
