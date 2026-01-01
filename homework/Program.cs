@@ -87,13 +87,37 @@ Console.WriteLine("..........................");
 
 #region session3
 //cargo ship with (switch & decimal=task )
-/*Console.WriteLine("welcome to cargo ship ");
-//value 
-decimal costPerkilo = 100;
+//use an empty array +switch statement + decimal data type =>
+//value
+decimal costPerKilo = 100; 
 decimal totalPrice = 0;
-decimal task = 0;
+
+Console.WriteLine("Welcome to the Golden Cargo Ship");
 //user input
-Console*/
+Console.WriteLine("How many cargo: ");
+decimal cargoWeight =Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"your cargo weight is{cargoWeight}kg.");
+// condition
+switch (cargoWeight)
+{
+    case<20:
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    case>20and<=40:
+        costPerKilo += 5;
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    case>40:
+        costPerKilo += 10;
+        totalPrice = cargoWeight * costPerKilo;
+        break;
+    default:
+        Console.WriteLine("wrong cargo weight");
+        break;
+}
+//output
+Console.WriteLine("your bill is ready .... ");
+Console.WriteLine($"Total Price:{totalPrice}$.");
     
 
 
