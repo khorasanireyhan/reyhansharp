@@ -85,11 +85,11 @@ Console.WriteLine("..........................");
 
 #endregion*/
 
-#region session3
+/*#region session3
 //cargo ship with (switch & decimal=task )
 //use an empty array +switch statement + decimal data type =>
 //value
-using System.ComponentModel.DataAnnotations;
+
 
 decimal costPerKilo = 100; 
 decimal totalPrice = 0;
@@ -106,8 +106,8 @@ for (int i = 1; i <= numofcargos; i++)
 {
     Console.WriteLine("enter your cargos weight :");
     decimal weight = decimal.Parse(Console.ReadLine());
-    Console.WriteLine($"your cargo weight is{weight}kg.");
-    cargoWeight.Add(weight);
+       cargoWeight.Add(weight);
+      Console.WriteLine($"your cargo weight is{weight}kg.");
 }
 // condition
 // For weight under 20 kg, use the fixed price.
@@ -153,4 +153,18 @@ Console.WriteLine("Have a nice day ^_^");
     
 Console.WriteLine("____________________________________");
 
+#endregion*/
+
+#region session3_(2)
+// Create an array with 4 elements and insert a new value at index 2,
+// shifting the existing elements to the right.
+//create a list =>
+List<int> numlist = new List<int> { 1, 2, 3, 3 };
+numlist.Insert(2, 14);
+/*foreach (int i in numlist)
+{
+    Console.WriteLine(i);
+}*/
+//numlist.ForEach(i => Console.WriteLine( i)); 
+Console.WriteLine(string.Join(" ", numlist)); //use ai 
 #endregion
