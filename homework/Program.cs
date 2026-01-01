@@ -115,37 +115,42 @@ for (int i = 1; i <= numofcargos; i++)
 // For 40 to 60 kg, increase the price by 4%.
 // For 60 to 100 kg, increase the price by 5%.
 // For weights above 100 kg, we do not offer delivery.
-foreach( decimal weight in cargoWeight)
-{ 
-switch (weight)
+foreach (decimal weight in cargoWeight)
 {
-    case<20:
-        totalPrice = weight * costPerKilo;
-        break;
-    case>20and<=40:
-        costPerKilo += (decimal)0.03;
-        totalPrice = weight * costPerKilo;
-        break;
-    case>40and<60 :
-        costPerKilo +=(decimal)0.04;
-        totalPrice = weight * costPerKilo;
-        break;
-    case >=60and<100:
-        costPerKilo += (decimal)0.05;
-        totalPrice = weight * costPerKilo;
-        break;
-    case >=100:
-        Console.WriteLine($"No delivery for {weight} . It's over 100 kg. ");
-        break;
-    default:
-        Console.WriteLine("wrong cargo weight");
-        break;
+    switch (weight)
+    {
+        case < 20:
+            totalPrice = weight * costPerKilo;
+            break;
+        case > 20 and <= 40:
+            costPerKilo *= (decimal)0.03;
+            totalPrice = weight * costPerKilo;
+            break;
+        case > 40 and < 60:
+            costPerKilo *= (decimal)0.04;
+            totalPrice = weight * costPerKilo;
+            break;
+        case >= 60 and < 100:
+            costPerKilo *= (decimal)0.05;
+            totalPrice = weight * costPerKilo;
+            break;
+        case >= 100:
+            Console.WriteLine($"No delivery for {weight} . It's over 100 kg. ");
+            break;
+        default:
+            Console.WriteLine("wrong cargo weight");
+            break;
+    }
 }
 
 //output
-Console.WriteLine("your bill is ready .... ");
-Console.WriteLine($"Total Price:{totalPrice}$.");
-    
+Console.WriteLine("your bill is ready ... ");
 
+Console.WriteLine("____________________________________");
+Console.WriteLine($"Here your Price:{totalPrice}$ for {numofcargos} cargos with {cargoWeight} kg .");
+
+Console.WriteLine("Have a nice day ^_^");
+    
+Console.WriteLine("____________________________________");
 
 #endregion
