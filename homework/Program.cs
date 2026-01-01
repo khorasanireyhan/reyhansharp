@@ -97,12 +97,16 @@ decimal totalPrice = 0;
 Console.WriteLine("Welcome to the Golden Cargo Ship");
 //user input
 Console.WriteLine("How many cargos do you have ? ");
-//if we want to limit it: int[]numofcargos={1,2,3,4,5,6,7,8,9,10},use array
-//list=>
-List<int> numofcargos = new List<int>();
-foreach (var VARIABLE in numofcargos)
+int numofcargos = int.Parse(Console.ReadLine());
+
+//array or list option
+List<decimal> cargoweight = new List<decimal>();
+
+for (int i = 1; i <= numofcargos; i++)
 {
-    
+    Console.WriteLine("enter your cargos weight :");
+    decimal weight = decimal.Parse(Console.ReadLine());
+    cargoweight.Add(weight);
 }
 
 decimal cargoWeight =Convert.ToInt32(Console.ReadLine());
