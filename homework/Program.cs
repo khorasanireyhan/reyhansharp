@@ -190,7 +190,8 @@ switch (userchoice)
         {
             Console.WriteLine($"Computer chose Rock too, dear  {name}");
             Console.WriteLine("It's a tie .try again !!!");
-        }else if (computerChoice == 2)
+        }
+        else if (computerChoice == 2)
         {
             Console.WriteLine($" You lose! Paper beats Rock,dear  {name}");
         }
@@ -200,25 +201,39 @@ switch (userchoice)
         }
 
         break;
-    case 2://paper
+    case 2: //paper
         if (computerChoice == 1)
         {
             Console.WriteLine($"You win! Paper beats Rock. ,dear  {name}");
-        }else if (computerChoice == 2)
+        }
+        else if (computerChoice == 2)
         {
             Console.WriteLine($"Computer chose paper too, dear  {name}");
             Console.WriteLine("It's a tie .try again !!!");
-        }else if (computerChoice == 3)
+        }
+        else if (computerChoice == 3)
         {
             Console.WriteLine($"You lose! Scissors beat Paper,dear{name}");
         }
+
         break;
-    case 3://scissor
-        if (computerChoice==3)
+    case 3: //scissor
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"You lose ! Rock beats Scissors , dear  {name}");
+        }
+        else if (computerChoice == 2)
+        {
+            Console.WriteLine($"You win! Scissors beat Paper , dear  {name}");
+        }
+        else if (computerChoice == 3)
         {
             Console.WriteLine($"Computer chose Scissor too, dear  {name}");
             Console.WriteLine("It's a tie .try again !!!");
         }
+
+        break;
 }
+Console.WriteLine("thanks for playing");
 
 #endregion
