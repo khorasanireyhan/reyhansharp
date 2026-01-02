@@ -154,17 +154,40 @@ Console.WriteLine("Have a nice day ^_^");
 Console.WriteLine("____________________________________");
 
 #endregion*/
-
+/*
 #region session3_(2)
 // Create an array with 4 elements and insert a new value at index 2,
 // shifting the existing elements to the right.
 //create a list =>
 List<int> numlist = new List<int> { 1, 2, 3, 3 };
 numlist.Insert(2, 14);
-/*foreach (int i in numlist)
+foreach (int i in numlist)
 {
     Console.WriteLine(i);
-}*/
+}
 //numlist.ForEach(i => Console.WriteLine( i)); 
-Console.WriteLine(string.Join(" ", numlist)); //use ai 
+//Console.WriteLine(string.Join(" ", numlist)); //use ai 
+#endregion*/
+
+#region session4
+//create a Rock Paper Scissors Game
+//user interface
+Console.WriteLine("welcome to the game");
+Console.WriteLine("enter your name :");
+string name = Console.ReadLine();
+Console.WriteLine("chose your number 1.rock 2.scissor3.paper");// fix it
+int userchoice = Convert.ToInt32(Console.ReadLine());
+//computer choice(used ai)
+Random rnd = new Random();
+int computerChoice = rnd.Next(0, 3); // 0, 1, or 
+//game logic
+switch (userchoice)
+{
+    case 
+}
+
+
+
+
+
 #endregion
