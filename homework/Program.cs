@@ -85,13 +85,13 @@ Console.WriteLine("..........................");
 
 #endregion*/
 
-#region session3
+/*#region session3
 //cargo ship with (switch & decimal=task )
 //use an empty array +switch statement + decimal data type =>
 //value
-using System.ComponentModel.DataAnnotations;
 
-decimal costPerKilo = 100; 
+
+decimal costPerKilo = 100;
 decimal totalPrice = 0;
 
 Console.WriteLine("Welcome to the Golden Cargo Ship");
@@ -106,8 +106,8 @@ for (int i = 1; i <= numofcargos; i++)
 {
     Console.WriteLine("enter your cargos weight :");
     decimal weight = decimal.Parse(Console.ReadLine());
-    Console.WriteLine($"your cargo weight is{weight}kg.");
-    cargoWeight.Add(weight);
+       cargoWeight.Add(weight);
+      Console.WriteLine($"your cargo weight is{weight}kg.");
 }
 // condition
 // For weight under 20 kg, use the fixed price.
@@ -150,7 +150,90 @@ Console.WriteLine("____________________________________");
 Console.WriteLine($"Here your Price:{totalPrice}$ for {numofcargos} cargos with {cargoWeight} kg .");
 
 Console.WriteLine("Have a nice day ^_^");
-    
+
 Console.WriteLine("____________________________________");
+
+#endregion*/
+/*
+#region session3_(2)
+// Create an array with 4 elements and insert a new value at index 2,
+// shifting the existing elements to the right.
+//create a list =>
+List<int> numlist = new List<int> { 1, 2, 3, 3 };
+numlist.Insert(2, 14);
+foreach (int i in numlist)
+{
+    Console.WriteLine(i);
+}
+//numlist.ForEach(i => Console.WriteLine( i));
+//Console.WriteLine(string.Join(" ", numlist)); //use ai
+#endregion*/
+
+#region session4
+
+//create a Rock Paper Scissors Game
+//user interface
+Console.WriteLine("welcome to the game");
+Console.WriteLine("enter your name :");
+string name = Console.ReadLine();
+Console.WriteLine("choose your choice ((...1.rock_2.paper_3.scissor...))");
+int userchoice = Convert.ToInt32(Console.ReadLine());
+//also we can write=>[string userchoice = Console.ReadLine();]Converting a string to a number
+//computer choice(used ai)
+Random rnd = new Random();
+int computerChoice = rnd.Next(1, 4); // 0, 1, or 2
+//game logic
+switch (userchoice)
+{
+    case 1: //rock
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"Computer chose Rock too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }
+        else if (computerChoice == 2)
+        {
+            Console.WriteLine($" You lose! Paper beats Rock,dear  {name}");
+        }
+        else if (computerChoice == 3)
+        {
+            Console.WriteLine($"You win! Rock beats Scissors. dear {name}");
+        }
+
+        break;
+    case 2: //paper
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"You win! Paper beats Rock. ,dear  {name}");
+        }
+        else if (computerChoice == 2)
+        {
+            Console.WriteLine($"Computer chose paper too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }
+        else if (computerChoice == 3)
+        {
+            Console.WriteLine($"You lose! Scissors beat Paper,dear{name}");
+        }
+
+        break;
+    case 3: //scissor
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"You lose ! Rock beats Scissors , dear  {name}");
+        }
+        else if (computerChoice == 2)
+        {
+            Console.WriteLine($"You win! Scissors beat Paper , dear  {name}");
+        }
+        else if (computerChoice == 3)
+        {
+            Console.WriteLine($"Computer chose Scissor too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }
+
+        break;
+}
+Console.WriteLine("thanks for playing");
 
 #endregion
