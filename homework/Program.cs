@@ -91,7 +91,7 @@ Console.WriteLine("..........................");
 //value
 
 
-decimal costPerKilo = 100; 
+decimal costPerKilo = 100;
 decimal totalPrice = 0;
 
 Console.WriteLine("Welcome to the Golden Cargo Ship");
@@ -150,7 +150,7 @@ Console.WriteLine("____________________________________");
 Console.WriteLine($"Here your Price:{totalPrice}$ for {numofcargos} cargos with {cargoWeight} kg .");
 
 Console.WriteLine("Have a nice day ^_^");
-    
+
 Console.WriteLine("____________________________________");
 
 #endregion*/
@@ -165,35 +165,60 @@ foreach (int i in numlist)
 {
     Console.WriteLine(i);
 }
-//numlist.ForEach(i => Console.WriteLine( i)); 
-//Console.WriteLine(string.Join(" ", numlist)); //use ai 
+//numlist.ForEach(i => Console.WriteLine( i));
+//Console.WriteLine(string.Join(" ", numlist)); //use ai
 #endregion*/
 
 #region session4
+
 //create a Rock Paper Scissors Game
 //user interface
 Console.WriteLine("welcome to the game");
 Console.WriteLine("enter your name :");
 string name = Console.ReadLine();
-Console.WriteLine("choose your choice ((...1.rock_2.scissor_3.paper...))");
+Console.WriteLine("choose your choice ((...1.rock_2.paper_3.scissor...))");
 int userchoice = Convert.ToInt32(Console.ReadLine());
 //also we can write=>[string userchoice = Console.ReadLine();]Converting a string to a number
 //computer choice(used ai)
 Random rnd = new Random();
-int computerChoice = rnd.Next(0, 3); // 0, 1, or 2
+int computerChoice = rnd.Next(1, 4); // 0, 1, or 2
 //game logic
 switch (userchoice)
 {
-    case1://rock
-    if (computerChoice== 1)
-    {Console.WriteLine($"computer choose the same dear {name}");
-    Console.WriteLine("try again !!!");
-    return;
-    } 
+    case 1: //rock
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"Computer chose Rock too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }else if (computerChoice == 2)
+        {
+            Console.WriteLine($" You lose! Paper beats Rock,dear  {name}");
+        }
+        else if (computerChoice == 3)
+        {
+            Console.WriteLine($"You win! Rock beats Scissors. dear {name}");
+        }
+
+        break;
+    case 2://paper
+        if (computerChoice == 1)
+        {
+            Console.WriteLine($"You win! Paper beats Rock. ,dear  {name}");
+        }else if (computerChoice == 2)
+        {
+            Console.WriteLine($"Computer chose paper too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }else if (computerChoice == 3)
+        {
+            Console.WriteLine($"You lose! Scissors beat Paper,dear{name}");
+        }
+        break;
+    case 3://scissor
+        if (computerChoice==3)
+        {
+            Console.WriteLine($"Computer chose Scissor too, dear  {name}");
+            Console.WriteLine("It's a tie .try again !!!");
+        }
 }
-
-
-
-
 
 #endregion
