@@ -175,15 +175,21 @@ foreach (int i in numlist)
 Console.WriteLine("welcome to the game");
 Console.WriteLine("enter your name :");
 string name = Console.ReadLine();
-Console.WriteLine("chose your number 1.rock 2.scissor3.paper");// fix it
+Console.WriteLine("choose your choice ((...1.rock_2.scissor_3.paper...))");
 int userchoice = Convert.ToInt32(Console.ReadLine());
+//also we can write=>[string userchoice = Console.ReadLine();]Converting a string to a number
 //computer choice(used ai)
 Random rnd = new Random();
-int computerChoice = rnd.Next(0, 3); // 0, 1, or 
+int computerChoice = rnd.Next(0, 3); // 0, 1, or 2
 //game logic
 switch (userchoice)
 {
-    case 
+    case1://rock
+    if (computerChoice== 1)
+    {Console.WriteLine($"computer choose the same dear {name}");
+    Console.WriteLine("try again !!!");
+    return;
+    } 
 }
 
 
