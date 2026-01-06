@@ -73,8 +73,38 @@ Console.WriteLine($"Total Price:{totalPrice}$.");
 
 #endregion*/
 
-#region  session3
-//string
+//#region  session3
+//string...cargos ship // rock game
+//#endregion
+
+#region session 5
+// یک  نمایشگاه ماشین 3 ماشینه بسازید 
+namespace 
+//class
+public class Car
+{
+    //property 
+    public string brand { get; set; }
+    public string model { get; set; }
+    public decimal Price { get; set; }
+    public decimal Discount { get; set; }
+    public decimal Totalprice { get; set; }
+    
+    //behaver
+    public void DiscountMeth()
+    {
+        Totalprice = Price- (Discount * Price)/100;
+    }
+    
+    Car car = new Car();
+    Car car2 = new Car();
+
+    public Car Car1
+    {
+        get => car;
+        set => car = value ?? throw new ArgumentNullException(nameof(value));
+    }
+}
 
 
 #endregion
